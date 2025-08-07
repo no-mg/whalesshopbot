@@ -1,6 +1,6 @@
 import telebot
 
-bot = telebot.TeleBot('8265914747:AAF921fy2ffJaO6K-IwYCvesSLxYTjkVxbQ')
+bot = telebot.TeleBot('')
 from telebot import types
 
 @bot.message_handler(commands=['start'])
@@ -30,5 +30,6 @@ elif message.text == 'Правила сайта':
 
 elif message.text == 'Советы по оформлению публикации':
     bot.send_message(message.from_user.id, 'Подробно про советы по оформлению публикаций прочитать по ' + '[ссылке](https://habr.com/ru/docs/companies/design/)', parse_mode='Markdown')
+
 
 bot.polling(none_stop=True, interval=0) #обязательная для работы бота часть
